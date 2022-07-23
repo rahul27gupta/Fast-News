@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  
+  <com.google.android.material.card.MaterialCardView
+      android:id="@+id/cvCategory"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_margin="@dimen/dimen_4dp"
+      android:focusable="true"
+      android:elevation="@dimen/dp0"
+      android:foreground="?android:selectableItemBackground"
+      android:padding="@dimen/dimen_2dp"
+      app:cardCornerRadius="@dimen/dimen_40dp"
+      app:cardElevation="@dimen/dimen_4dp">
+    
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvCategoryTitle"
+        style="@style/Baloo_Medium_F14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dimen_8dp"
+        android:layout_marginBottom="@dimen/dimen_8dp"
+        android:paddingStart="@dimen/dimen_20dp"
+        android:paddingEnd="@dimen/dimen_20dp"
+        tools:text="Item"/>
+  
+  </com.google.android.material.card.MaterialCardView>
+
+</layout>

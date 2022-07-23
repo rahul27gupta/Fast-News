@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  <!-- Text_Style_Regular -->
+  
+  <!-- Text_Style_Medium -->
+  
+  <style name="Baloo_Medium_F14">
+    <item name="android:textSize">@dimen/text_size_14sp</item>
+    <item name="fontFamily">@font/baloo_2_medium</item>
+    <item name="android:textColor">@color/color_000000</item>
+  </style>
+  
+  <!-- Text_Style_Semi_Bold -->
+  
+  <style name="Baloo_Semi_Bold_F22">
+    <item name="android:textSize">@dimen/text_size_22sp</item>
+    <item name="fontFamily">@font/baloo_2_semi_bold</item>
+    <item name="android:textColor">@color/color_000000</item>
+  </style>
+  
+  <style name="Baloo_Semi_Bold_F28">
+    <item name="android:textSize">@dimen/text_size_28sp</item>
+    <item name="fontFamily">@font/baloo_2_semi_bold</item>
+    <item name="android:textColor">@color/color_000000</item>
+  </style>
+  
+  <!-- Text_Style_Bold -->
+
+</resources>

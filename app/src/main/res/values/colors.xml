@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  
+  
+  <color name="color_ffffff">#fff</color>
+  <color name="color_000000">#000</color>
+  <color name="color_ebedf1">#ebedf1</color>
+  <color name="color_aaaaaa">#aaa</color>
+  
+  <color name="color_66a3ff">#66A3FF</color>
+  
+  <color name="color_blur">#a8ffffff</color>
+
+</resources>

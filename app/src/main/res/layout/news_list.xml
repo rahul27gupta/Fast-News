@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+  
+  <androidx.cardview.widget.CardView
+      android:id="@+id/cvNews"
+      android:layout_width="match_parent"
+      android:layout_height="match_parent"
+      android:layout_margin="@dimen/dimen_20dp"
+      app:cardCornerRadius="@dimen/dimen_8dp"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+      
+      <androidx.appcompat.widget.AppCompatImageView
+          android:id="@+id/ivNews"
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:elevation="@dimen/dimen_2dp"
+          app:layout_constraintBottom_toBottomOf="parent"
+          app:layout_constraintEnd_toEndOf="parent"
+          app:layout_constraintStart_toStartOf="parent"
+          app:layout_constraintTop_toTopOf="parent" />
+      
+      <ProgressBar
+          android:id="@+id/pbImage"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:visibility="visible"
+          android:indeterminateTint="@color/color_66a3ff"
+          app:layout_constraintBottom_toBottomOf="@id/ivNews"
+          app:layout_constraintEnd_toEndOf="@id/ivNews"
+          app:layout_constraintStart_toStartOf="@id/ivNews"
+          app:layout_constraintTop_toTopOf="@id/ivNews" />
+      
+      <com.google.android.material.textview.MaterialTextView
+          android:id="@+id/tvNewsTitle"
+          style="@style/Baloo_Semi_Bold_F28"
+          android:layout_width="match_parent"
+          android:layout_height="0dp"
+          android:layout_marginHorizontal="@dimen/dimen_12dp"
+          android:elevation="@dimen/dimen_2dp"
+          android:textColor="@color/color_ffffff"
+          app:layout_constraintBottom_toBottomOf="@+id/ivNews"
+          app:layout_constraintEnd_toEndOf="@id/ivNews"
+          app:layout_constraintStart_toStartOf="@id/ivNews"
+          tools:text="IPL 2020: Virat Kohli goes ballistic in net admits 'shoulder are sore'" />
+    
+    </androidx.constraintlayout.widget.ConstraintLayout>
+  </androidx.cardview.widget.CardView>
+</layout>
