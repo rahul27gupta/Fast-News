@@ -15,14 +15,15 @@ import com.app.fastnews.databinding.FragmentHomeBinding
 import com.app.fastnews.feature.home.ui.adapter.CategoryAdapter
 import com.app.fastnews.feature.home.ui.adapter.NewsAdapter
 import com.app.fastnews.feature.home.ui.vm.NewsViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.text.SimpleDateFormat
 import java.util.*
 
-
+@AndroidEntryPoint
 class HomeFragment : Fragment(), CategoryAdapter.CategoryClickListener {
   private var mBinding: FragmentHomeBinding? = null
   private var mViewModel: NewsViewModel? = null
-  private val SORT_BY: String = "popularity"
+  private val sortBy by lazy { "popularity" }
   private val newsAdapter by lazy { NewsAdapter(context) }
   
   override fun onCreateView(
@@ -65,7 +66,7 @@ class HomeFragment : Fragment(), CategoryAdapter.CategoryClickListener {
   
   private fun setupView() {
     //initialize viewModel
-    mViewModel = ViewModelProvider(this).get(NewsViewModel::class.java)
+    mViewModel = ViewModelProvider(this)[NewsViewModel::class.java]
     
     //initialize recyclerView
     mBinding?.categoryList?.initRecyclerView(this)
@@ -79,10 +80,10 @@ class HomeFragment : Fragment(), CategoryAdapter.CategoryClickListener {
   override fun onTabChange(tabId: Int?) {
     when (tabId) {
       1 -> mViewModel?.getTopHeadlines("in")
-      2 -> mViewModel?.getArticles("business", getCurrentDate(), SORT_BY)
-      3 -> mViewModel?.getArticles("apple", getCurrentDate(), SORT_BY)
-      4 -> mViewModel?.getArticles("tesla", getCurrentDate(), SORT_BY)
-      5 -> mViewModel?.getArticles("technology", getCurrentDate(), SORT_BY)
+      2 -> mViewModel?.getArticles("business", getCurrentDate(), sortBy)
+      3 -> mViewModel?.getArticles("apple", getCurrentDate(), sortBy)
+      4 -> mViewModel?.getArticles("tesla", getCurrentDate(), sortBy)
+      5 -> mViewModel?.getArticles("technology", getCurrentDate(), sortBy)
     }
   }
   

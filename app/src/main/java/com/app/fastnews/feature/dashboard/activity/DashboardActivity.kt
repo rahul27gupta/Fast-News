@@ -10,8 +10,9 @@ import com.app.fastnews.databinding.ActivityDashboardBinding
 import com.app.fastnews.feature.bookmark.ui.fragment.BookmarkFragment
 import com.app.fastnews.feature.home.ui.fragment.HomeFragment
 import com.app.fastnews.feature.profile.ui.fragment.ProfileFragment
+import dagger.hilt.android.AndroidEntryPoint
 
-
+@AndroidEntryPoint
 class DashboardActivity : AppCompatActivity() {
   private var mBinding: ActivityDashboardBinding? = null
   
