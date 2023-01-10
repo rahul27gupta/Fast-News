@@ -3,14 +3,13 @@ package com.app.fastnews.network
 import okhttp3.Interceptor
 import okhttp3.OkHttpClient
 import okhttp3.Response
-import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 class RetrofitClient {
   
-  object RetrofitInstance{
+  companion object {
     private var retrofit: Retrofit? = null
     private const val BASE_URL = "https://newsapi.org/v2/"
     
@@ -35,12 +34,12 @@ class RetrofitClient {
       }
       return retrofit
     }
-  
+    
     private fun addApiKeyToRequests(chain: Interceptor.Chain): Response {
       val request = chain.request().newBuilder()
       val originalHttpUrl = chain.request().url
       val newUrl = originalHttpUrl.newBuilder()
-        .addQueryParameter("apiKey", "your_api_key").build()
+        .addQueryParameter("apiKey", "api_key").build()
       request.url(newUrl)
       return chain.proceed(request.build())
     }

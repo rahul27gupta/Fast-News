@@ -1,19 +1,20 @@
 package com.app.fastnews.feature.home.ui.bean
 
 import com.google.gson.annotations.SerializedName
+import kotlinx.serialization.Serializable
 
-class NewsResponse {
-  
+@Serializable
+data class NewsResponse(
   @SerializedName("author")
-  var author: String? = null
+  var author: String? = null,
   
   @SerializedName("title")
-  var title: String? = null
+  var title: String? = null,
   
   @SerializedName("url")
-  var url: String? = null
+  var url: String? = null,
   
   @SerializedName("urlToImage")
   var imgUrl: String? = null
-  
-}
+
+)
